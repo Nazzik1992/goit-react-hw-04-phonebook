@@ -51,7 +51,7 @@ useEffect(() => {
     setContacts(newContacts);
   };
 
-  const visibleContacts = contacts.filter(element =>
+  const visiblContacts = contacts.filter(element =>
     element.userName.toUpperCase().includes(filter.toUpperCase())
   );
 
@@ -65,7 +65,7 @@ useEffect(() => {
             <Filter onChange={handlerOnChangeFilter} value={filter} />
             <h2>Contacts</h2>
             <Contacts
-              contacts={visibleContacts}
+              contacts={visiblContacts}
               onDelete={handlerDeleteContact}
             />
           </>
